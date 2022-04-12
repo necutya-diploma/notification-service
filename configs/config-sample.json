@@ -1,0 +1,7 @@
+{
+  "env": "dev",
+  "email": {
+    "host": "smtp.gmail.com",
+    "port": 465
+  }
+}

@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option go_package = "./pkg/grpc/gen";
+
+package mailer;
+
+service Mailer{
+  rpc SendEmail(EmailMessage) returns (EmptyResponse) {}
+}
+
+message EmailMessage{
+  string from = 1;
+  repeated string to = 3;
+  string subject = 4;
+  string body = 5;
+}
+
+message EmptyResponse{
+}
